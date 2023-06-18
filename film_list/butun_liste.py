@@ -12,7 +12,7 @@ def save_IMDB_xl():
     ws = wb.active
 
     # Write headers to the worksheet
-    ws.append(["Rank", "Name", "Year", "Rating","Category"])
+    ws.append(["Rank", "Name", "Year", "Rating","Category", "Description"])
 
     for category, gnr in zip(categoryList,gnrList):
         url = f"https://www.imdb.com/search/title/?genres={category}&sort=user_rating,desc&title_type=feature&num_votes=25000,&pf_rd_m=A2FGELUUNOQJNL&pf_rd_p=94365f40-17a1-4450-9ea8-01159990ef7f&pf_rd_r=7ZHT2F4Q0BQ2W9670M7G&pf_rd_s=right-6&pf_rd_t=15506&pf_rd_i=top&ref_=chttp_gnr_{gnr}"
@@ -37,11 +37,14 @@ def save_IMDB_xl():
             # Extract year
             year = movie.find("span", class_="lister-item-year").text.strip("()").replace("I) (","").replace("I","")
             
-            # Extract IMDb rating
+            # Extract IMDB rating
             rating = movie.find("div", class_="ratings-bar").strong.text
+
+            # Extract description
+            desc = movie.find_all("p", class_="text-muted")[1].text
             
             # Write the data to the worksheet
-            ws.append([rank, name, year, rating, category])
+            ws.append([rank, name, year, rating, category, desc])
 
     # Save the workbook
     wb.save("butun_liste.xlsx")        
