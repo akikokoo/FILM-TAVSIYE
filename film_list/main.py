@@ -20,11 +20,11 @@ def set_random_film_data_list(excel_file,selected_category):
     df = pd.read_excel(excel_file)
     film_rows = df[df['Category'] == selected_category]
 
-    names = film_rows['Name'].tolist()
-    years = film_rows['Year'].tolist()
-    ratings = film_rows['Rating'].tolist()
-    descs = film_rows["Description"].toList()
-    id = film_rows["ID"].toList()
+    names = film_rows['Name'].values.toList()
+    years = film_rows['Year'].values.toList()
+    ratings = film_rows['Rating'].values.toList()
+    descs = film_rows["Description"].values.toList()
+    id = film_rows["ID"].values.toList()
     
     if selected_category == "film_noir":
         film_number = random.randint(0,30)
