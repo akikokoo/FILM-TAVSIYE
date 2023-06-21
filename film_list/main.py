@@ -28,9 +28,9 @@ def set_random_film_data_list(excel_file,selected_category):
     id = film_rows["ID"].values
     
     if selected_category == "film_noir":
-        film_number = random.randint(0,30)
+        film_number = random.randint(0,31)
     else:
-        film_number = random.randint(0,50)
+        film_number = random.randint(0,51)
     
     data_list.extend([names[film_number],years[film_number],ratings[film_number],id[film_number],descs[film_number]])
     
@@ -53,7 +53,7 @@ def main():
 
     with st.sidebar:
         st.header("Film Öneri Uygulaması")
-        selected_category = st.selectbox("Kategori Seçiniz:", [category for category in categoryList])
+        selected_category = st.selectbox("Kategori Seçiniz:", [category for category in categoryList].insert("Seçiniz"),index=0)
         set_random_film_data_list(r"film_list\butun_liste.xlsx",selected_category)
         st.markdown('''
             <br />
