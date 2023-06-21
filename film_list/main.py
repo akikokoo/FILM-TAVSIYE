@@ -53,15 +53,20 @@ def main():
 
     with st.sidebar:
         st.header("Film Öneri Uygulaması")
-        selected_category = st.selectbox("Kategori Seçiniz:", [category for category in categoryList].insert(0,"Seçiniz"),index=0)
-        set_random_film_data_list(r"film_list\butun_liste.xlsx",selected_category)
+        selected_category = st.selectbox("Kategori Seçiniz:", [category for category in categoryList],index=0)
+
+        if st.button("Film öner"):
+            set_random_film_data_list(r"film_list\butun_liste.xlsx",selected_category)
+            st.markdown(f'''
+                <img src=[{get_image_url(data_list[3])} />          
+            ''')
+        """
         st.markdown('''
             <br />
             <button target="suggest">Film Öner</button>
         ''')
-    st.markdown(f'''
-        <img src=[{get_image_url(data_list[3])} />          
-    ''')
+        """
+    
     
 
 
