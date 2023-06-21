@@ -1,4 +1,4 @@
-bs4==4.12.2
+bs4==0.0.1
 cinemagoer==2023.5.1
 openpyxl==3.0.10
 pandas==1.5.2
