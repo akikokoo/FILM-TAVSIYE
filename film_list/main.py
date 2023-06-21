@@ -13,7 +13,7 @@ categoryList = ["action","adventure","animation","biography","comedy","crime","d
 def call_save_IMDB_xl():
     return save_IMDB_xl()
 
-@st.cache_data
+
 def set_random_film_data_list(excel_file,selected_category):
     global data_list
     data_list = []
