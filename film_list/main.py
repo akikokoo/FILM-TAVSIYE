@@ -50,7 +50,7 @@ def main():
     #retrieving
     call_save_IMDB_xl()
 
-    with st.sidebar():
+    with st.sidebar:
         st.header("Film Öneri Uygulaması")
         selected_category = st.selectbox("Kategori Seçiniz:", [category for category in categoryList])
         set_random_film_data_list(r"film_list\butun_liste.xlsx",selected_category)
