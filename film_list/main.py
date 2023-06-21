@@ -31,7 +31,7 @@ def set_random_film_data_list(excel_file,selected_category):
     else:
         film_number = random.randint(0,50)
     
-    data_list.append(names[film_number],years[film_number],ratings[film_number],id[film_number],descs[film_number])
+    data_list.extend([names[film_number],years[film_number],ratings[film_number],id[film_number],descs[film_number]])
     
 def get_image_url(film_ID):
     ia = Cinemagoer()
