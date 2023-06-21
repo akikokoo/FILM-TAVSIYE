@@ -1,0 +1,21 @@
+.buton[target="suggest"]{
+    color: white;
+    background: rgb(1, 182, 1);
+    border-radius: 20px;
+    border: none;
+    padding: 10px 10px 10px 10px;
+}
+
+.buton[target="suggest"]:hover{
+    color: rgb(1, 182, 1);
+    background: white;
+    cursor: pointer;;
+    transition: 1s;
+}
+
+.buton[target="suggest"]:active {
+    opacity: 0.6;
+  }
+
+
+
