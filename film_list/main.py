@@ -60,7 +60,7 @@ def main():
     if a:
         set_random_film_data_list(r"film_list\butun_liste.xlsx",selected_category)
         st.markdown(f'''
-            <img src={get_image_url(data_list[3])} />          
+            <img src={get_image_url(data_list[3])} width=500 height=500 />          
         ''',unsafe_allow_html=True)      
         
     
