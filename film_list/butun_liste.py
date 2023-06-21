@@ -51,5 +51,5 @@ def save_IMDB_xl():
             ws.append([rank, name, year, rating, desc, id])
 
     # Save the workbook
-    wb.save("film_list/butun_liste.xlsx")
+    wb.save(r"film_list\butun_liste.xlsx")
 save_IMDB_xl()
