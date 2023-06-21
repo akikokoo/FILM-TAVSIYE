@@ -7,7 +7,7 @@ from imdb import Cinemagoer
 import random
 
 categoryList = ["action","adventure","animation","biography","comedy","crime","drama","family","fantasy","film_noir","history","horror","musical","music","mystery","romance","sci_fi","sport","thriller","war","western"]
-global data_list
+
 
 @st.cache_data
 def call_save_IMDB_xl():
@@ -15,6 +15,7 @@ def call_save_IMDB_xl():
 
 @st.cache_data
 def set_random_film_data_list(excel_file,selected_category):
+    global data_list
     data_list = []
 
     df = pd.read_excel(excel_file)
