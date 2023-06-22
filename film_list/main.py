@@ -39,7 +39,7 @@ def get_image_url(film_ID):
     movie = ia.get_movie(film_ID)
 
     url = movie['cover url']
-    url = url[:url.rindex('@') + 1] + url[url.rindex('.'):]
+    #url = url[:url.rindex('@') + 1] + url[url.rindex('.'):]
 
     base, ext = os.path.splitext(url)
     i = url.count('@')
@@ -58,12 +58,20 @@ def main():
 
         a = st.button("Film öner")
     if a:
-        set_random_film_data_list(r"film_list\butun_liste.xlsx",selected_category)
+        set_random_film_data_list("C:\\Users\\Akif\\Desktop\\film\\film_list\\butun_liste.xlsx",selected_category)
+        st.image(get_image_url(data_list[3]), width=400)
         st.markdown(f'''
-            <img src={get_image_url(data_list[3])} width=500 height=500 />          
+                <p><strong>Name:</strong>{data_list[0]}</p>
+                <br />
+                <p><strong>Rating:</strong>{data_list[2]}</p>
+                <br />
+                <p><strong>Year:</strong>{data_list[1]}</p>
+                <br />
+                <p><strong>Description:</strong>{data_list[4]}</p>
+                <br />    
         ''',unsafe_allow_html=True)      
         
-    
+
     
 
 
