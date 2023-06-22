@@ -58,7 +58,7 @@ def main():
 
         a = st.button("Film öner")
     if a:
-        set_random_film_data_list("C:\\Users\\Akif\\Desktop\\film\\film_list\\butun_liste.xlsx",selected_category)
+        set_random_film_data_list("film_list\\butun_liste.xlsx",selected_category)
         st.image(get_image_url(data_list[3]), width=400)
         st.markdown(f'''
                 <p><strong>Name:</strong>{data_list[0]}</p>
