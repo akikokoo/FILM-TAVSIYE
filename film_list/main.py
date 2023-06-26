@@ -39,7 +39,8 @@ def get_image_url(film_ID):
     movie = ia.get_movie(film_ID)
 
     url = movie['cover url']
-    #url = url[:url.rindex('@') + 1] + url[url.rindex('.'):]
+    if ('@' in url) and ('.' in url):
+        url = url[:url.rindex('@') + 1] + url[url.rindex('.'):]
 
     base, ext = os.path.splitext(url)
     i = url.count('@')
