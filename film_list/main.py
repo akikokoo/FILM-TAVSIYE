@@ -6,12 +6,15 @@ import os
 from imdb import Cinemagoer
 import random
 
+
 st.set_page_config(
         page_title="Film Öneri Uygulaması",
         page_icon="🎥",
         layout="wide",
         initial_sidebar_state="expanded",
         menu_items={
+            "Get Help": "https://github.com/TOBB-ETU-CS-Community",
+            "Report a bug": "https://tobbetu-bilgisayar-toplulugu.streamlit.app/Geri_Bildirim_Formu",
             "About": "En İyi Film Önerileri İçin Doğru Adres!"
         },
     )
