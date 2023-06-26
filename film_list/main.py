@@ -6,6 +6,17 @@ import os
 from imdb import Cinemagoer
 import random
 
+st.set_page_config(
+        page_title="Film Öneri Uygulaması",
+        page_icon="🎥",
+        layout="wide",
+        initial_sidebar_state="expanded",
+        menu_items={
+            "About": "En İyi Film Önerileri İçin Doğru Adres!"
+        },
+    )
+
+
 categoryList = ["action","adventure","animation","biography","comedy","crime","drama","family","fantasy","film_noir","history","horror","musical","music","mystery","romance","sci_fi","sport","thriller","war","western"]
 
 
