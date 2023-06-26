@@ -28,9 +28,9 @@ def set_random_film_data_list(excel_file,selected_category):
     id = film_rows["ID"].values
     
     if selected_category == "film_noir":
-        film_number = random.randint(0,31)
+        film_number = random.randint(0,29)
     else:
-        film_number = random.randint(0,51)
+        film_number = random.randint(0,49)
     
     data_list.extend([names[film_number],years[film_number],ratings[film_number],id[film_number],descs[film_number]])
     
