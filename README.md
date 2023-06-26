@@ -1,4 +1,4 @@
-# _{FILM SUGGESTION WEB APP}_
+# _FILM SUGGESTION WEB APP_
 
 #### By _**{Akif Emre Reis and Can Gürcüoğlu}**_
 
