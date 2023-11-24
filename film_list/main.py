@@ -23,11 +23,6 @@ st.set_page_config(
 categoryList = ["action","adventure","animation","biography","comedy","crime","drama","family","fantasy","film_noir","history","horror","musical","music","mystery","romance","sci_fi","sport","thriller","war","western"]
 
 
-@st.cache_data
-def call_save_IMDB_xl():
-    return save_IMDB_xl()
-
-
 def set_random_film_data_list(excel_file,selected_category):
     global data_list
     data_list = []
@@ -63,8 +58,6 @@ def get_image_url(film_ID):
     return url
 
 def main():
-    #retrieving
-    call_save_IMDB_xl()
 
     with st.sidebar:
         st.header("Film Öneri Uygulaması")
