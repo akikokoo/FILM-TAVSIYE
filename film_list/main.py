@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import random
-from butun_liste import save_IMDB_xl
 import os
 from imdb import Cinemagoer
 import random
